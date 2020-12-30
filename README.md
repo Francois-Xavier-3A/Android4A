@@ -25,6 +25,6 @@ Le travil demandé était de réaliser une page de connxion et de réaliser sa b
 
 ##### Ecran de présentation:
 
- - Affiche les différentes cartes.
+ - Affiche les différentes cartes (En cours, une erreur "E/RecyclerView: No adapter attached; skipping layout" bloque la liste)
  
 
