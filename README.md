@@ -20,8 +20,10 @@ Le travil demandé était de réaliser une page de connxion et de réaliser sa b
 ##### Ecran de création de compte: 
 
  - Affiche la page de création des nouveaux utilisateurs dans la bdd.
+ <img src= "https://user-images.githubusercontent.com/64125059/103383741-2cdba580-4af4-11eb-86f0-5173f2012755.jpg" width="200" height="400"/>
 
-##### Ecran de presentation:
+
+##### Ecran de présentation:
 
  - Affiche les différentes cartes.
  
