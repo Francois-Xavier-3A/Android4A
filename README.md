@@ -4,7 +4,7 @@
 
 Simple projet pour découvrir la base de la programmation avec le langage kotlin sous Android Studio.
 
-Le travil demandé était de réaliser une page de connxion et de réaliser sa bdd.  
+Le travil demandé était de réaliser une page de connexion et de réaliser sa bdd.  
 
 #### Prérequis
 - Installation d'Android Studio
