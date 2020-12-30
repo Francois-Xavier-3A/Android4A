@@ -31,7 +31,7 @@ class MainRegister : AppCompatActivity() {
             when(it){
                 is CreateSucess -> {
                     mainViewModele.onClickedCreate(login_edit.text.toString().trim(), password_edit.text.toString())
-                    var toast: Toast = Toast.makeText(this,"Je suis là",Toast.LENGTH_LONG)
+                    var toast: Toast = Toast.makeText(this,"Save profile",Toast.LENGTH_LONG)
                     toast.show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent);

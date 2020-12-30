@@ -9,5 +9,5 @@ interface APIService {
 
     @GET("/data.json")
 
-    fun fetchAllUsers(): Call<List<Monster>>
+    fun fetchAllUsers(): Call<RestMonsterResponce>
 }

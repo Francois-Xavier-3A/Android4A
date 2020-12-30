@@ -23,29 +23,30 @@ class MainList : AppCompatActivity() {
         //setSupportActionBar(toolbar)
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://github.com/Francois-Xavier-3A/Cards/blob/master/")
+            .baseUrl("https://raw.githubusercontent.com/Francois-Xavier-3A/Cards/master/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val api = retrofit.create(APIService::class.java)
 
-        api.fetchAllUsers().enqueue(object : Callback<List<Monster>>{
+        api.fetchAllUsers().enqueue(object : Callback<RestMonsterResponce>{
 
-            override fun onResponse(call: Call<List<Monster>>, response: Response<List<Monster>>) {
-                showData(response.body()!!)
+            override fun onResponse(call: Call<RestMonsterResponce>, response: Response<RestMonsterResponce>) {
+                if (response.isSuccessful && response.body()!= null)
+                    showData(response.body()!!)
             }
 
-            override fun onFailure(call: Call<List<Monster>>, t: Throwable) {
+            override fun onFailure(call: Call<RestMonsterResponce>, t: Throwable) {
                 d("daniel", "onFailure")
             }
 
         })
 
     }
-    private fun showData(monsters: List<Monster>) {
+    private fun showData(monsters: RestMonsterResponce) {
         recycler_view.apply {
             layoutManager = LinearLayoutManager(this@MainList)
-            adapter = MonsterAdapter(monsters)
+            adapter = MonsterAdapter(monsters.results, this@MainList)
         }
     }
 }
